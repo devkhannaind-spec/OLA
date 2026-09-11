@@ -22,3 +22,11 @@ group by Vehicle_Type;
 #-----> 2. Find the average ride distance for each vehicle type:
 select * from average_ride_distance_for_each_vehicle;
 
+#-----> 3. Get the total number of cancelled rides by customers:
+create view  number_of_cancelled_rides as
+SELECT COUNT(*) FROM bookings 
+WHERE Booking_Status = 'Canceled by Customer';
+
+#-----> Retrieve all successful bookings:
+select * from number_of_cancelled_rides;
+
