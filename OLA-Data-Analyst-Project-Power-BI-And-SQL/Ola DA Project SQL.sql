@@ -30,3 +30,12 @@ WHERE Booking_Status = 'Canceled by Customer';
 #-----> Retrieve all successful bookings:
 select * from number_of_cancelled_rides;
 
+#-----> 4. List the top 5 customers who booked the highest number of rides:
+create view top_5_customers as
+select Customer_ID,count(Booking_ID) as total_rides from bookings
+group by Customer_ID
+order by total_rides desc limit 5;
+
+#-----> 4. List the top 5 customers who booked the highest number of rides:
+select * from top_5_customers;
+
