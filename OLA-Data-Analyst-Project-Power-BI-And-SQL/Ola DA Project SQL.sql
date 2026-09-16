@@ -39,3 +39,12 @@ order by total_rides desc limit 5;
 #-----> 4. List the top 5 customers who booked the highest number of rides:
 select * from top_5_customers;
 
+#-----> 5. Get the number of rides cancelled by drivers due to personal and car-related issues:
+create view rides_cancelled_by_drivers as
+select count(*) from  bookings
+where Canceled_Rides_by_Driver = 'Personal & Car related issue';
+
+#-----> 5. Get the number of rides cancelled by drivers due to personal and car-related issues:
+select * from rides_cancelled_by_drivers;
+
+
