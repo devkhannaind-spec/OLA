@@ -48,3 +48,13 @@ where Canceled_Rides_by_Driver = 'Personal & Car related issue';
 select * from rides_cancelled_by_drivers;
 
 
+#-----> 6. Find the maximum and minimum driver ratings for Prime Sedan bookings:
+Create View Max_Min_Driver_Rating As
+SELECT  MAX(Driver_Ratings) as max_rating, MIN(Driver_Ratings) as min_rating 
+FROM bookings 
+WHERE Vehicle_Type = 'Prime Sedan';
+
+#-----> 6. Find the maximum and minimum driver ratings for Prime Sedan bookings:
+select * from Max_Min_Driver_Rating;
+
+
