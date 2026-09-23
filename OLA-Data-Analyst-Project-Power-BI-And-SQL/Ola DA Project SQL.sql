@@ -58,3 +58,11 @@ WHERE Vehicle_Type = 'Prime Sedan';
 select * from Max_Min_Driver_Rating;
 
 
+#-----> 7. Retrieve all rides where payment was made using UPI:
+create view UPI_payments as
+select * from bookings
+where Payment_Method='UPI';
+
+#-----> 7. Retrieve all rides where payment was made using UPI:
+select * from UPI_payments;
+
