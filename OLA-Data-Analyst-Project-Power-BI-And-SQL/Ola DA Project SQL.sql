@@ -66,3 +66,13 @@ where Payment_Method='UPI';
 #-----> 7. Retrieve all rides where payment was made using UPI:
 select * from UPI_payments;
 
+#-----> 8. Find the average customer rating per vehicle type:
+create view avg_rating_for_v_type as
+select Vehicle_Type,round(avg(Customer_Rating),1) as avg_rating_for_v_type 
+from bookings 
+group by Vehicle_Type;
+
+#-----> 8. Find the average customer rating per vehicle type:
+select * from avg_rating_for_v_type;
+
+
