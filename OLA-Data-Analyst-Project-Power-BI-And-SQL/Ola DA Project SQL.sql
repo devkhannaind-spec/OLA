@@ -76,3 +76,13 @@ group by Vehicle_Type;
 select * from avg_rating_for_v_type;
 
 
+#-----> 9. Calculate the total booking value of rides completed successfully:
+create view total_booking_value_rides_completed as
+SELECT SUM(Booking_Value) as total_successful_value FROM bookings WHERE
+Booking_Status = 'Success';
+
+
+#-----> 9. Calculate the total booking value of rides completed successfully:
+select * from total_booking_value_rides_completed;
+
+
