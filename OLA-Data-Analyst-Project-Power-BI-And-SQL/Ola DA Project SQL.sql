@@ -86,3 +86,10 @@ Booking_Status = 'Success';
 select * from total_booking_value_rides_completed;
 
 
+#-----> 10. List all incomplete rides along with the reason:
+create view Incomplete_Rides_Reason As
+SELECT Booking_ID, Incomplete_Rides_Reason FROM bookings 
+WHERE Incomplete_Rides ='Yes';
+
+#-----> 10. List all incomplete rides along with the reason:
+select * from Incomplete_Rides_Reason;
